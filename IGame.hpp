@@ -9,6 +9,7 @@
     #define IGAME_HPP_
 
     #include <functional>
+    #include <chrono>
     #include "IGraphic.hpp"
 
 class IGame {
@@ -16,8 +17,8 @@ class IGame {
 
     typedef std::function<void ()>  Action;
 
-    virtual void update() = 0;
-    virtual Action  &getKeybind(char key) const = 0;
+    virtual void update(std::chrono::nanoseconds deltaT) = 0;
+    virtual const Action  &getKeybind(char key) const = 0;
     virtual void    setGraphic(IGraphic &handler) = 0;
 
 };
