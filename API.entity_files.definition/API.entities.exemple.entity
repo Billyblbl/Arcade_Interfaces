@@ -1,0 +1,6 @@
+#referenced png is an imaginary sprite texture containing 3 images of pacman each of 10x10 pixels
+
+./ressources/sprites/exemple_entity.png
+pacman.mouth_open:[0,0]:[9,9]:ffff00:C
+pacman.mouth_semiclosed:[10,0]:[19,9]:ffff00:G
+pacman.mouth_closed:[20,0]:[29,9]:ffff00:O

@@ -1,0 +1,35 @@
+Definition of .entity file format for Arcade EPITECH Project
+
+- White space & Comments
+	All lines STARTING with the caracter '#' in an entity file shall be ignored
+	All empty lines shall be ignored
+
+- Sprite
+	The first usable line must contain either the path to a loadable sprite texture file or the string "undefined"
+
+- States
+	All following lines define all states of the graphic entity under the following pattern:
+
+		<state name>:<upleft coordinates>:<downright coordinates>:<color>:<ASCII character>
+
+	where:
+	- <state name> is the name of the state,
+	- <upleft coordinates> are the coordinates of the upleft corner pixel of the rectangle in the texture file containing the image of the state, if the sprite texture is "undefined", this is to be ignored
+	- <downright coordinates> are the coordinates of the downright corner pixel of the rectangle in the texture file containing the image of the state, if the sprite texture is "undefined", this is to be ignored
+	- <color> is the color for ASCII display of the state, under or hex format (ex: for yellow : ffff00)
+	- <ASCII character> is the character of the state for ASCII display
+
+- Coordinates
+	Coordinates in a .entity file should follow the format "[x,y]"
+
+
+An entity file would roughly look like this:
+
+----start of file----
+<path/to/sprite/texture.imageformat>
+<1st state name>:<upleft coordinates>:<downright coordinates>:<color>:<ASCII character>
+<2nd state name>:<upleft coordinates>:<downright coordinates>:<color>:<ASCII character>
+<3rd state name>:<upleft coordinates>:<downright coordinates>:<color>:<ASCII character>
+...
+<Nth state name>:<upleft coordinates>:<downright coordinates>:<color>:<ASCII character>
+-----end of file-----
