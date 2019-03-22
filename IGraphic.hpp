@@ -8,6 +8,7 @@
 #ifndef IGRAPHIC_HPP_
 	#define IGRAPHIC_HPP_
 
+	#include <string>
 	#include "IDisplayable.hpp"
 
 class IGraphic {
