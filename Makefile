@@ -5,21 +5,38 @@
 ## Arcade Library Plug-able Common API
 ##
 
-PDF	=	ALPaCA.doc.pdf
+DOC		=	ALPaCA.doc
 
-all: $(PDF)
+PDF		=	$(DOC).pdf
 
-$(PDF):
+HTML	=	$(DOC).html
+
+ALL		=	$(PDF) $(HTML)
+
+all: $(ALL)
+
+run:
 	doxygen Doxyfile
-	$(MAKE) -C latex pdf
-	ln -s ./latex/refman.pdf $@
+
+pdf: $(PDF)
+
+html: $(HTML)
+
+$(PDF): run
+	$(MAKE) -C doc/latex pdf
+	ln -sf ./doc/latex/refman.pdf $@
+
+$(HTML): run
+	ln -sf ./doc/html/index.html $@
 
 clean:
-	rm -rf doc
-	rm -rf html
-	rm -rf latex
-	rm -rf $(PDF)
+	rm -rf doc/html
+	rm -rf doc/latex
+	rm -rf doc/man
+	rm -rf doc/rtf
+	rm -rf doc/xml
+	rm -rf $(ALL)
 
 re: clean all
 
-.PHONY: all clean re
+.PHONY: all run clean re
