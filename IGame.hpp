@@ -26,7 +26,7 @@ class IGame {
     ///Enum type of keycodes for special keys.
     ///These keycodes are more than 1 char wide in data size.
     ///As these values are also int32_t this list is not exhaustive as a list of valid keycode for
-    ///a game implementation keybinds. Valid keycodes also contains ASCII codes for the corresponding
+    ///a game implementation keybinds. Valid keycodes also include ASCII values for the corresponding
     ///characters
     enum KeyCode : int32_t {
         arrowUp = 0x415b1b,     ///<Keycode for the Up arrow key
