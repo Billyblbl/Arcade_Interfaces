@@ -9,7 +9,7 @@ All empty lines shall be ignored.
 
 ## Sprite
 
-The first usable line must contain either the path to a loadable sprite texture file or the string "undefined"
+The first usable line must contain either the path to a loadable sprite texture file or the string "undefined". This path must be relative from the execution folder of the core, and designate a file available in the appropriate [RAFH](RAHF.md) location.
 
 ## States
 
@@ -39,7 +39,7 @@ Where:
 
 Colors in a `.entity` file should follow the 32bit hexadecimal integer format with color order RRGGBBAA (ex for yellow : FFFF00FF)
 
-## Exemple
+#### Exemple
 
 An entity file should roughly look like :
 

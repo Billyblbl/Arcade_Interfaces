@@ -36,4 +36,4 @@ A Graphic handler must be a complete implementation in a Graphic Library of the 
 
 ### Displayable Entity
 
-The entities used to draw the frames of the game on the handler's display must be instances of the Graphic library's implementation of the `IDisplayable` interface. This implementation must provide the ability for entities to have a list of several named states in which they can be placed. These states must be defined by the parsing of a file associated with the desired entity, under the [A.L.P-a.C.A custom `.entity` file format](entity_file_format.md).
+The entities used to draw the frames of the game on the handler's display must be instances of the Graphic library's implementation of the `IDisplayable` interface. This implementation must provide the ability for entities to have a list of several named states in which they can be placed. These states must be defined by the parsing of a file associated with the desired entity, under the [A.L.P-a.C.A custom `.entity` file format](entity_file_format.md). This file must be provided in the Graphical library's own ressource folder in the [RAFH](RAFH.md).
