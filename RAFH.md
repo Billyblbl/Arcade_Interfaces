@@ -3,10 +3,11 @@
 To ensure compatibility of all libraries, ressources acquisition of [Entity files](entity_file_format.md), Spritesheet textures and others must follow the *same pattern*, which means all ressources lookups must follow a *common path structure hierarchy*. As such, A.L.P-a.C.A defines the following **Ressource Acquisition File Hierarchy**:
 
 - `<root>`/
-	- libs/
-		- `<lib>`/
-	- games/
-		- `<lib>`/
+	- ressources/
+		- libs/
+			- `<lib>`/
+		- games/
+			- `<lib>`/
 
 Where:
 
@@ -18,15 +19,16 @@ Each library's own ressource hierarchy's model is left to its own discretion.
 #### Exemple
 
 	arcade/
-		libs/
-			somelib/
-				fonts/
-					someFont.ttf
-		games/
-			someGame/
-				entities/
-					anEntity.entity
-					anotherEntity.entity
-				textures/
-					anEntitysTexture.png
-					anotherEntitysTexture.png
+		ressources/
+			libs/
+				somelib/
+					fonts/
+						someFont.ttf
+			games/
+				someGame/
+					entities/
+						anEntity.entity
+						anotherEntity.entity
+					textures/
+						anEntitysTexture.png
+						anotherEntitysTexture.png
